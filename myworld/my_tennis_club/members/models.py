@@ -7,3 +7,6 @@ class Member(models.Model):
   apellidoMiembro = models.CharField(max_length=255)
   telefonoMiembro = models.IntegerField(null=True)
   fechaIngreso = models.DateField(null=True)
+  
+  def __str__(self):
+    return f"{self.nombreMiembro} {self.apellidoMiembro}"
